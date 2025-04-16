@@ -7,7 +7,7 @@ export default function App() {
         </h2>
 
         <button className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">
-          Option A
+          Firoj
         </button>
       </div>
     </>
