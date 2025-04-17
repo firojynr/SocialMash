@@ -1,15 +1,22 @@
-export default function App() {
-  return (
-    <>
-      <div className="bg-white p-6 rounded-xl shadow-md w-full max-w-md mx-auto">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-4">
-          Who should win the coding battle?
-        </h2>
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import CreatePoll from "./pages/CreatePoll";
+import Result from "./pages/Result";
+import TrendingPolls from "./pages/TrendingPolls";
 
-        <button className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">
-          Firoj
-        </button>
-      </div>
-    </>
+function App() {
+  return (
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/create" element={<CreatePoll />} />
+        <Route path="/result" element={<Result />} />
+        <Route path="/trending" element={<TrendingPolls />} />
+      </Routes>
+    </Router>
   );
 }
+
+export default App;
